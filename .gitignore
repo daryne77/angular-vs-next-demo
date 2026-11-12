@@ -1,0 +1,8 @@
+node_modules/
+.next/
+dist/
+.angular/
+next-env.d.ts
+backend/data.json
+next/CLAUDE.md
+.DS_Store

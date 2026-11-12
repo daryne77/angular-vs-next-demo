@@ -1,0 +1,15 @@
+{
+  "name": "angular-vs-next-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "npm install && npm --prefix angular install && npm --prefix next install",
+    "build": "npm --prefix angular run build && npm --prefix next run build",
+    "serve": "concurrently -n api,angular,next -c blue,red,green \"node api/server.js\" \"node angular/serve.mjs\" \"npm --prefix next start\"",
+    "start": "npm run build && npm run serve",
+    "reset": "rm -f backend/data.json"
+  },
+  "devDependencies": {
+    "concurrently": "9.2.1"
+  }
+}
